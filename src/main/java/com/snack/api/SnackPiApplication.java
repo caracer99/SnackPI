@@ -10,7 +10,7 @@ public class SnackPiApplication {
 		
 		System.out.println("유후~");
 		SpringApplication.run(SnackPiApplication.class, args1);
-		System.out.println("에헤라디아~");
+		System.out.println("에헤라~");
 		
 	}
 

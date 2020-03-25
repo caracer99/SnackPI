@@ -29,6 +29,7 @@ public class SignController {
 		
 		Sign sign = signService.signIn(param);
 		
+		// Success
 		if(null != sign) {
 			
 			String token = jwtUtil.generateToken(sign.getId(), sign.getRole());
@@ -40,6 +41,7 @@ public class SignController {
 					.message("successed sign")
 					.data(token);
 		}
+		// Fail
 		else {
 			return new ApiResult<>()
 					.success(false)

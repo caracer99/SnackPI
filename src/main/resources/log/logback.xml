@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<springProfile name="dev">
+
+		<appender name="default" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%d %5p %c - %m%n</pattern>
+			</encoder>
+		</appender>
+
+		<root level="DEBUG">
+			<appender-ref ref="default" />
+		</root>
+
+	</springProfile>
+
+	<springProfile name="real">
+
+		<appender name="default" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%d %5p %c - %m%n</pattern>
+			</encoder>
+		</appender>
+
+		<root level="INFO">
+			<appender-ref ref="default" />
+		</root>
+
+		<logger name="com.snack.api" level="DEBUG" />
+	</springProfile>
+
+</configuration>
